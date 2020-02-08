@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>给你一堆小心心</title>
+    <style type="text/css">
+
+ .heart{
+  background-color:rgb(238, 43, 43);
+  width:42px;
+  height:42px;
+  transform: rotate(45deg);
+  position:absolute;
+  animation-name: scale, opacity;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  }
+.heart::after{
+  position:absolute;
+  content:"";
+  background-color:rgb(238, 43, 43);
+  width:42px;
+  height:42px;
+  border-radius: 50%;
+  left:-25px;
+}
+.heart::before{
+  position:absolute;
+  content:"";
+  background-color:rgb(238, 43, 43);
+  width:42px;
+  height:42px;
+  border-radius: 50%;
+  top:-25px;
+}
+
+@keyframes scale{
+  25%,75%{transform: rotate(45deg) scale(.5);}
+  50%,100% {transform: rotate(45deg) scale(1);}
+}
+
+@keyframes opacity{
+  25%,75% {opacity:0.5;}
+  50%,100% {opacity:1;}
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+
+div#ground{
+    width: 100vw;
+    height: 100vh;
+}
+
+/**
+ * 显示文字
+ */
+h1#text{
+    color:rgb(53, 42, 42);
+    text-align: center;
+}
+
+</style>
+
+
+</head>
+
+<body>
+  <h1 id="text"></h1>
+  <div id="ground"></div>
+  
+  <script type="text/javascript" src="heartJS.js">
+    </script>
+    
+</body>
+
+
+</html>
