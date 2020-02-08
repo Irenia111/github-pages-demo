@@ -2,8 +2,7 @@
 <html lang="zh-CN"> 
     <head>
     <title>introduce of CSS: CSS Basic Box Model</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    charset="utf-8">
+    <meta charset="utf-8">
     </head>
     <body>
         <header>
@@ -13,8 +12,8 @@
             <ol>
                 <li><a href="#css">CSS 简述</a></li>
                 <li><a href="#box">CSS 盒模型</a></li>
-                <li><a href="#block_and_inlineblock">块级元素和内联元素</a></li>
-                <li><a href="#layout">CSS 布局</a></li>
+                <li><a href="#layout">块级元素和内联元素</a></li>
+                <li><a href="#block_and_inlineblock">CSS 布局</a></li>
             </ol>
         </nav>
         <article id="css">
@@ -44,6 +43,7 @@
             </p>
             <p>语法注意事项：
             <ul>
+                <li>区分大小写，没有“//”形式的注释，注释为“/* */”。</li>
                 <li>每个规则集（除了选择器的部分）都应该包含在成对的大括号里（{}）。</li>
                 <li>在每个声明里要用冒号（:）将属性与属性值分隔开。</li>
                 <li>在每个规则集里要用分号（;）将各个声明分隔开。</li>
@@ -100,7 +100,7 @@
             <section>
             <h3>2.1 CSS 标准盒模型</h3>
             <dl>
-                <dt>CSS 的标准盒模型中组成一个块级盒子需要以下五个部分：</dt>
+                <dt>CSS 的标准盒模型（content box）中组成一个块级盒子需要以下五个部分：</dt>
                 <div class="img"><img style="max-width: 100%;"src="css_intro_img/box-model.png"/></div>
                 <dt>Content 内容
                     <dd>这个区域是用来显示内容，大小可以通过设置 width 和 height。</dd>
@@ -138,16 +138,14 @@
         <article id="block_and_inlineblock">
             <h2>3. 块级元素和内联元素</h2>
             <p>从元素的默认样式来看，HTML元素被分为两类，第一类是块元素（Block-level elements），第二类是内联元素（Inline elements） ，两类元素在CSS中的默认呈现方式有所差别。</p>
+            <p>块级元素和内联元素的样式可以采用dispaly修改。</p>
             <section>
             <h3>3.1 块级元素</h3>
-            <p>块级元素占据其父元素（容器）的整个空间，因此创建了一个“块”。通常浏览器会在块级元素前后另起一个新行。</p>
+            <p>块级元素占据其父元素（容器）的整个空间（默认宽度为auto），因此创建了一个“块”。通常浏览器会在块级元素前后另起一个新行。</p>
             <dl>块级元素标签
                 <dt>&lt;article>
                     <dd>文章内容。</dd>
                 </dt>
-                <dt>&lt;section>
-                    <dd>页面区域。</dd>
-                </dt>  
                 <dt>&lt;aside>
                     <dd>伴随内容。</dd>
                 </dt>
@@ -166,67 +164,50 @@
                 <dt>&lt;div>
                     <dd>文档分区。</dd>
                 </dt>
-                <dt>&lt;dl> 
-                    <dd>定义列表。</dd>
+                <dt>&lt;dl> &lt;dd>
+                    <dd>联系方式信息。</dd>
                 </dt>
-                <dt>&lt;dd>
-                <dd>定义列表中定义条目描述。</dd>
+                <dt>&lt;address>
+                <dd>联系方式信息。</dd>
                 </dt>
-                <dt>&lt;footer>
-                <dd>区段尾或页尾。</dd>
-                </dt>
-                <dt>&lt;form>
-                <dd>表单。</dd>
-                </dt>
-                <dt>&lt;fieldset>
-                <dd>表单元素分组。</dd>
-                </dt>
-                <dt>&lt;h1>-&lt;h6>
-                <dd>标题级别 1-6。</dd>
-                </dt>
-                <dt>&lt;header>
-                <dd>区段头或页头。</dd>
-                </dt>
-                <dt>&lt;hr>
-                <dd>水平分割线。</dd>
-                </dt>
-                <dt>&lt;table>
-                <dd>表格。</dd>
-                </dt>
-                <dt>&lt;tfoot>
-                <dd>表脚注。</dd>
-                </dt>
-                <dt>&lt;p>
-                <dd>段落。</dd>
-                </dt>
-                <dt>&lt;ol>
-                <dd>有序列表。</dd>
-                </dt>
-                <dt>&lt;ul>
-                <dd>无序列表。</dd>
-                </dt>
-                <dt>&lt;figcaption>
-                <dd>图文信息组标题。</dd>
-                </dt>
-                <dt>&lt;figure>
-                <dd>图文信息组。</dd>
-                </dt>
-                <dt>&lt;video>
-                <dd>视频。</dd>
-                </dt>
-                <dt>&lt;pre>
-                <dd>预格式化文本。</dd>
-                </dt>
-                <dt>&lt;hgroup>
-                <dd>标题组。</dd>
-                </dt>
-                <dt>&lt;noscript>
-                <dd>不支持脚本或禁用脚本时显示的内容。</dd>
-                </dt>                    
+                <dt>&lt;address>
+            <dd>联系方式信息。</dd>
+            </dt>
+            <dt>&lt;address>
+                    <dd>联系方式信息。</dd>
+                    </dt>
+                    <dt>&lt;address>
+                            <dd>联系方式信息。</dd>
+                            </dt>
+                            <dt>&lt;address>
+                                    <dd>联系方式信息。</dd>
+                                    </dt>
+                                    <dt>&lt;address>
+                                            <dd>联系方式信息。</dd>
+                                            </dt>
+                                            <dt>&lt;address>
+                                                    <dd>联系方式信息。</dd>
+                                                    </dt>
+                                                    <dt>&lt;address>
+                                                            <dd>联系方式信息。</dd>
+                                                            </dt>
+                                                            <dt>&lt;address>
+                                                                    <dd>联系方式信息。</dd>
+                                                                    </dt>
+                                                                    <dt>&lt;address>
+                                                                            <dd>联系方式信息。</dd>
+                                                                            </dt>
+                                                                            <dt>&lt;address>
+                                                                                    <dd>联系方式信息。</dd>
+                                                                                    </dt>
             </dl>
             </section>
             <section>
             <h3>3.2 内联元素</h3>
+            <p>一般情况下，内联元素只能包含数据和其他内联元素。</p>
+            <p>而块级元素可以包含内联元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比内联元素更”大型“的结构。</p>
+            <p>默认情况下，内联元素不会以新行开始，而块级元素会新起一行。</p>
+            <p>内联元素无法指定content的高度及宽度，但line-height可指定内联元素的实际高度。</p>
             <ul>内联元素标签
                 <li>b, big, i, small, tt</li>
                 <li>abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var</li>
@@ -247,28 +228,14 @@
         </section>
         <section>
             <h3>4.2 float布局</h3>
-            <p>float 属性最初只用于在成块的文本内浮动图像，但是现在它已成为在网页上创建多列布局的最常用工具之一。</p>
-            <p>最初，引入 float 属性是为了能让 web 开发人员实现简单的布局，包括在一列文本中浮动的图像，文字环绕在它的左边或右边。你可能在报纸版面上看到过。但 Web 开发人员很快意识到，任何东西都可以浮动，而不仅仅是图像，所以浮动的使用范围扩大了。</p>
-            <p>浮动曾被用来实现整个网站页面的布局，它使信息列得以横向排列（默认的设定则是按照这些列在源代码中出现的顺序纵向排列）。目前出现了更新更好的页面布局技术，所以使用浮动来进行页面布局应被看作传统的布局方法。</p>
         </section> 
         <section>
             <h3>4.3 flex布局</h3>
-            <p>弹性盒子是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。 弹性盒子提供了工具，允许快速创建曾经被证明用CSS很难实现的一些复杂，灵活的布局和功能。</p>
-            <div class="img"><img style="max-width: 100%;" src="css_intro_img/flex_terms.png"/></div>
-            <ul>当元素表现为 flex 框时，它们沿着两个轴来布局：
-                <li>主轴（main axis）是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为 main start 和 main end。</li>
-                <li>交叉轴（cross axis）是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 cross start 和 cross end。</li>
-                <li>设置了 display: flex 的父元素被称之为 flex 容器（flex container）。</li>
-                <li>在 flex 容器中表现为柔性的盒子的元素被称之为 flex 项（flex item）。</li>
-            </ul>
         </section>
          <section>
-            <h3>4.4 grid布局</h3>
-            <p>网格布局是一个成熟的设计工具，许多现代网站布局是基于规则网格。在本文中，我们将看看基于网格的设计，以及如何使用CSS来创建网格——两者都通过现在的工具，和刚刚开始在浏览器中可用的新技术。</p>
-            <p>网格仅仅是由水平和垂直线集合创建的一个模式，我们可以根据这个模式排列我们的设计元素。它们帮助我们创建设计——在页面之间移动时元素不会跳动或更改宽度，从而在我们的网站上提供高一致性。</p>
-            <p>网格通常具有列（column），行（row），以及在每行和列之间的间隙——通常称为沟槽（gutter）。</p>
-            <div class="img"><img style="max-width: 100%;" src="css_intro_img/grid.png"/></div>
+            <h3>4.4 grind布局</h3>
         </section>
         </article>
+      
     </body>
 </html>
