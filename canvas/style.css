@@ -1,0 +1,16 @@
+#canvas{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    border: 2px black;
+}
+#clear{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+#save{
+    position: absolute;
+    left: 100px;
+    top: 20px;
+}
