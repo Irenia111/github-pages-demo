@@ -6,7 +6,7 @@ let str1=`/*今天，我们当一回社会人，画一个小猪佩奇
   **/
  .pig_background {
     position: fixed;
-	width: 70%; height: 650px; top: 0; left: 10px;
+	width: 60%; height: 650px; top: 0; left: 10px;
     margin: 0px auto; background: rgb(36,185,15);
     background: linear-gradient(0deg, rgba(36,185,15,1) 0%, rgba(36,185,15,1) 40%, rgba(163,219,241,1) 40%, rgba(163,219,241,1) 100%);
 }
@@ -318,7 +318,6 @@ let animation = ()=>{
         html.innerHTML = str2;
         style.innerHTML = str1.substring(0,n);
         window.scrollTo(0, 99999);
-        html.scrollTo(0, 99999);
         if (n < str1.length - 1){
             n++;
             animation(); 
