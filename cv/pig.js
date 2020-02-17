@@ -36,6 +36,18 @@ let str1=`/*今天，我们当一回社会人，画一个小猪佩奇
 }
 
 /*鼻子和下巴被遮住了，我们把它补回来*/
+.pig_nose {
+	width: 51px;
+    height: 70px;
+    top: 147px;
+    left: 107px;
+    border-radius: 72% 72% 72% 72%/ 72% 72% 72% 72%;
+    border: 6px solid #ef96c2;
+    background-color: #ffb3da;
+    transform: rotate(36deg);
+    z-index: 103;
+    box-sizing: border-box;
+}
 .pig_head_white_left_top {
     width: 200px; height: 66px; bottom: 84px; top: 166px; left: 134px;
     background-color: #ffb3da;
