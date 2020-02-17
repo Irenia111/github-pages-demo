@@ -1,0 +1,28 @@
+div {
+    position: absolute;
+    transform-origin: left top;
+}
+
+.html {
+    width: 25%;
+    height: 100vh;
+    top: 0px;
+    left:70%;
+    word-wrap:break-word;/*内部文字自动换行*/
+    color:steelblue;
+    overflow: visible;
+}
+/*针对手机，重新设置上下布局*/
+@media(max-width: 900px){
+    .html {
+    width: 70%;
+    height: 60vh;
+    top:660px;
+    left:15%;
+    word-wrap:break-word;/*内部文字自动换行*/
+    color:steelblue;
+    }
+   .phone{
+       left:15%;
+   }
+}
